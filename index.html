@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <link rel="icon" href="./Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<header class="main-header">
+    <div class="logo-container">
+        <img src="./Images/logo.png" alt="Logo" class="site-logo" />
+    </div>
+    <section>
+        <div class="marie">
+            <div class="text-content">
+                <h1 style="color: white;" id="home">MARIE CURIE</h1>
+                <p style="color: white; font-style: italic;" class="quote">
+                    We’re all victims of our <br>
+                    own hubris at times.
+                </p>
+                <p style="color: white;" class="subtext">
+                    One never notices what has been done; <br>
+                    one can only see what remains to be done.
+                </p>
+            </div>
+            <div class="image-container">
+                <img class="mmm" src="./Images/hero.png" alt="Marie Curie">
+            </div>
+        </div>
+    </section>
+</header>
+
+<!-- Hamburger Icon -->
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Navigation Menu -->
+<nav class="nav-menu" id="navMenu">
+  <a href="#home">HOME</a>
+  <a href="#biography">BIOGRAPHY</a>
+  <a href="#research">RESEARCH</a>
+  <a href="#gallery">GALLERY</a>
+  <a href="#book">BOOKS</a>
+  <a href="#filmography">FILMOGRAPHY</a>
+  <a href="#aw">AWARDS</a>
+</nav>
+
+
+  <!-- Small Counter -->
+  <div class="visitor-counter" onclick="openPopup()">
+    <div class="vc-header">
+      <i class="fa-solid fa-chart-simple fa-lg"></i>
+      <h3>VISITOR COUNTER</h3>
+    </div>
+    <div class="vc-row">
+      <span>Today</span>
+      <span class="vc-today" id="todayCount">0</span>
+    </div>
+    <div class="vc-row">
+      <span>Yesterday</span>
+      <span class="vc-yesterday" id="yesterdayCount">0</span>
+    </div>
+  </div>
+
+  <!-- Popup Overlay -->
+  <div class="overlay" id="popupOverlay">
+    <div class="popup">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-header">
+        <i class="fa-solid fa-chart-simple fa-lg"></i>
+        <h3>Stats</h3>
+      </div>
+      <div class="popup-row"><span>TODAY</span><span class="today" id="popupToday">0</span></div>
+      <div class="popup-row"><span>THIS WEEK</span><span class="red" id="popupWeek">0</span></div>
+      <div class="popup-row"><span>LAST WEEK</span><span class="red" id="popupLastWeek">0</span></div>
+      <div class="popup-row"><span>THIS MONTH</span><span class="red" id="popupMonth">0</span></div>
+      <div class="popup-row"><span>LAST MONTH</span><span class="red" id="popupLastMonth">0</span></div>
+      <div class="popup-row"><span>THIS YEAR</span><span class="red" id="popupYear">0</span></div>
+      <div class="popup-row"><span>LAST YEAR</span><span class="red" id="popupLastYear">0</span></div>
+      <div class="popup-row"><span>TOTAL</span><span class="total" id="popupTotal">0</span></div>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popupOverlay").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
+
+    <!-- biography section  -->
+    <section id="biography">
+
+
+        <div class="about">
+
+
+            <div>
+                <h1 style="font-size: 32px;">About Curie</h1>
+
+                <p>Marie Curie,née Maria Sklodowska, was born in Warsaw on November 7, 1867, the daughter of a
+                    secondary-school teacher. She received a general education in local schools and some scientific
+                    training
+                    from her father. She became involved in a students' revolutionary organization and found it prudent
+                    to
+                    leave Warsaw, then in the part of Poland dominated by Russia, for Cracow, which at that time was
+                    under
+                    Austrian rule. In 1891, she went to Paris to continue her studies at the Sorbonne where she obtained
+                    Licenciateships in Physics and the Mathematical Sciences. She met Pierre Curie, Professor in the
+                    School
+                    of Physics in 1894 and in the following year they were married. She succeeded her husband as Head of
+                    the
+                    Physics Laboratory at the Sorbonne, gained her Doctor of Science degree in 1903, and following the
+                    tragic death of Pierre Curie in 1906, she took his place as Professor of General Physics in the
+                    Faculty
+                    of Sciences, the first time a woman had held this position. She was also appointed Director of the
+                    Curie
+                    Laboratory in the Radium Institute of the University of Paris, founded in 1914.
+                    Her early researches, together with her husband, were often performed under difficult conditions,
+                    laboratory arrangements were poor and both had to undertake much teaching to earn a livelihood. The
+                    discovery of radioactivity by Henri Becquerel in 1896 inspired the Curies in their brilliant
+                    researches
+                    and analyses which led to the isolation of polonium, named after the country of Marie's birth, and
+                    radium. Mme. Curie developed methods for the separation of radium from radioactive residues in
+                    sufficient quantities to allow for its characterization and the careful study of its properties,
+                    therapeutic properties in particular.</p>
+            </div>
+
+
+
+
+            <div>
+                <img src="./Images/Biography.png" alt="">
+            </div>
+        </div>
+        <div class="aboutt-text">
+            <p>As a teenager, Curie made a pact with her sister Bronya: she would support Bronya while she was in
+                medical school in Paris, and then Bronya would pay Curie's way. From the age of 17, for six years, Curie
+                worked as a governess and tutor, while attempting to study in her spare time.</p>
+        </div>
+    </section>
+
+
+
+    <!-- gallery section  -->
+    <section id="gallery">
+        <div class="carousel">
+            <button class="carousel-button-prev">
+                <i class="fa-regular fa-circle-left"></i>
+
+            </button>
+            <div class="carousel-container">
+
+                <ul class="carousel1">
+                    <li class="carousel-slide">
+
+                        <img src="./Images/Sculpture-of-Marie-Sklodowska-Curie-by-polish-sculptor-Bronislaw-Krzysztof.-The-Nobel-prize-winning-scientist-is-holding-a-graphic-symbol-of-Polonium-in-her-hand..jpg"
+                            alt="gallery image">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="./Images/marie-curie-in-her-lab-in-paris.jpg" alt="gallery image">
+
+
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="./Images/medium_Marie_Curie_the_scientist_Card_53e3670423.jpg" alt="gallery image">
+
+
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="./Images/Pierre_and_Marie_Curie_crop4.jpg" alt="gallery image">
+
+
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button-next">
+                <i class="fa-regular fa-circle-right"></i>
+
+
+            </button>
+            <div class="carousel-nav">
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- detail section  -->
+    <section>
+
+        <div class="image-text">
+            <!-- <img class="image-text" src="" alt="" > -->
+            <p>“It was like a new world opened to me, the world of science, which I was at last permitted to know in all
+                liberty.”</p>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="detail">
+
+            <div>
+
+                <img src="./Images/Radiation.png" alt="">
+
+                <p class="image-details" style="color: gray;">On 25 June 1903 Marie Curie defended her doctoral thesis
+                    on radioactive
+                    substances at Université de
+                    la
+                    Sorbonne in Paris, thus becoming the first woman in France to receive a doctoral degree. Image shows
+                    the
+                    thesis cover: Recherches sur les substances radioactives (Research on Radioactive Substances).Photo:
+                    Public domain, via Wikimedia Commons</p>
+            </div>
+
+            <div>
+                <h1 class="detail-header">This is radiation </h1>
+                <p class="image-details2">Curie decided to do her thesis on radiation, recently discovered in uranium by
+                    Henri Becquerel. She
+                    found
+                    that an ore containing uranium was far more radioactive than could be explained by its uranium
+                    content.
+                    This led her and her husband, Pierre, to the discovery of a new element that was 400 times more
+                    radioactive than uranium. In 1898 it was added to the Periodic Table as polonium, named after
+                    Curie's
+                    birth country.</p>
+                <p class="image-details2 ">Then Curie discovered an even more radioactive element, radium, and, through
+                    observation of radium,
+                    made a fundamental discovery: Radiation wasnt dependent on the organisation of atoms at the
+                    molecular level; something was happening inside the atom itself. The atom was not, as scientists
+                    believed at the time, inert, indivisible, or even solid.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- noble prize section  -->
+    <section>
+        <h1 style="font-size: 32px;" class="prize">Nobel Prizes in two scientific categories</h1>
+
+        <div class="noble-prize">
+
+            <div>
+                <p>For her research in “radiation phenomena,” Curie became, in 1903, the first woman to receive a Nobel
+                    Prize. French academics originally proposed only her husband and Henri Becquerel, but. <a
+                        class="link" style="text-decoration: none; color: #1a73e8; "
+                        href="https://www.nobelprize.org/prizes/physics/1903/pierre-curie/facts/" target="_blank"
+                        rel="noopener noreferrer">Pierre</a>
+                    Curie insisted that his wife share the honour.</p>
+                <br>
+                <br>
+                <br>
+
+                <p> In 1911, for the isolation of radium, she was awarded another Nobel Prize, this time in chemistry.
+                    She
+                    was and still is the only person to be awarded Nobel Prizes in two scientific categories. By that
+                    time,
+                    Curie was world-famous, and the director of the Curie Laboratory at the newly established Radium
+                    Institute (today the Curie Institute).</p>
+            </div>
+            <div>
+                <img src="./Images/Noble prize.png" alt="">
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- perrrie currie section  -->
+    <section>
+        <h1 style="font-size: 32px;" class="prize">The tragic death of Pierrie Curie</h1>
+        <div class="perrie">
+
+
+            <div>
+                <img src="./Images/perrie currie.webp" alt="">
+                <p class="perrie-text">Wedding photo of Pierre and Marie Curie, 1895.Copyright ©️ Association Curie
+                    Joliot-Curie,
+                    Photographer
+                    unknown</p>
+            </div>
+            <div>
+                <p class="perrie-text2">Pierre Curie was the love of Curie's life and her partner in science. They met
+                    in 1894 when Marie
+                    Curie
+                    worked in Pierre Curie's lab; they were married the following year.The couple had two
+                    daughters,Irène and Eve, and a few years after they married, Pierre Curie abandoned his own research
+                    to
+                    join his wife's study of radioactivity. The Curies affair of the heart and mind ended tragically not
+                    long after Eve was born. In 1906, Pierre Curie was run over by a horse and carriage and killed.
+                    Curie believed scientific research was a public good and championed its utility. She and her husband
+                    had
+                    discovered that radium destroyed diseased cells faster than healthy cells, and thus that radiation
+                    could
+                    be used to treat tumours.
+                </p>
+                <p class="perrie-text2">
+                    During World War I, Curie promoted the use of X-rays; she developed radiological cars - which later
+                    became known as “petites Curies” - to allow battlefield surgeons to X-ray wounded soldiers and
+                    operate more accurately.
+                </p>
+            </div>
+        </div>
+        <p class="perrie-text3">
+            The Curies did not fully appreciate the danger of the radioactive materials they handled. Pierre Curie gave
+            himself a lesion when he purposely exposed his arm to radium. Worse, however, was working for years in a
+            poorly ventilated shed, isolating radium salts from tons of pitchblende ore.</p>
+    </section>
+
+
+
+    <!-- notebook  section -->
+    <section>
+        <div class="notebook-header">
+
+            <h2>“I was taught that the way of progress was neither swift nor easy.”</h2>
+            <p>Marie Curie</p>
+        </div>
+        <div class="notebook">
+
+            <div>
+                <p class="notebook-text">Both Curies were constantly ill from radiation sickness, and Marie Curie’s
+                    death from aplastic anemia in
+                    1934, at age 66, was likely caused by radiation exposure. A few of her books and papers are still so
+                    radioactive that they are stored in lead boxes. For example, Marie Curie’s notebook from 1899–1902,
+                    containing notes from experiments on radioactive substances, is still radioactive and will be for
+                    1,500
+                    years. It seems fitting that Curie left a scientific legacy that is literally untouchable. </p>
+            </div>
+            <div>
+                <img src="./Images/MCurie_DISCOVERY_asset32.jpg" alt="">
+                <p style="text-align: center; font-size: 15px; color: gray;">Marie Curie's notebook.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- research section -->
+    <section id="research">
+
+        <h1 style="font-size: 32px;" class="prize">Noble Prize Winning Research</h1>
+        <div class="research">
+            <h1>1903 - Noble Prize Winner in Physics</h1>
+            <p>Marie Curie was awarded the Nobel Prize in Physics in 1903 alongside her husband Pierre Curie and
+                physicist Henri Becquerel.This recognition was given for their pioneering research on radioactivity, a
+                term Marie herself coined.
+                Their collaborative work built on Becquerel's initial discovery of spontaneous radiation in uranium.
+                The Curies further demonstrated that radiation was not a chemical reaction, but rather a fundamental
+                property of atoms — revolutionizing the understanding of atomic physics.</p>
+            <span class="research2">Discovery of radioactivity in uranium and thorium, and proving it was an
+                atomic-level phenomenon.</span>
+        </div>
+        <div class="research">
+            <h1>1911 - Noble Prize Winner in Chemistry</h1>
+            <p>Marie Curie received her second Nobel Prize — this time in Chemistry — in 1911, making her the first
+                person to win two Nobel Prizes in different sciences.
+                This award honored her discovery of the elements radium and polonium, which she successfully isolated
+                and studied in pure form.Her work involved rigorous chemical separation techniques to extract tiny
+                amounts of radium from tons of pitchblende ore — a monumental achievement in experimental chemistry.</p>
+            <span class="research2">Isolation of radium and polonium, and extensive research into their chemical
+                properties and radioactive
+                behavior.</span>
+        </div>
+    </section>
+
+
+    <!-- books related to curie section  -->
+    <section class="books" id="book">
+        <h1>Books related to marie curie</h1>
+        <div class="book1">
+
+
+            <div>
+                <img src="./Images/curie.jpg" alt="">
+                <h1>"Marie Curie: A Biography"</h1>
+                <p>by Marilyn Bailey Ogilvie</p>
+            </div>
+
+            <div><img src="./Images/curie2.jpg" alt="">
+                <h1>"Obsessive Genius: The Inner<br>World of Marie Curie"</h1>
+                <p>by Barbara Goldsmith</p>
+            </div>
+
+            <div>
+                <img src="./Images/514BHF4Y2AL._UF1000,1000_QL80_.jpg" alt="">
+                <h1>"Marie Curie: Radioactive Substances"</h1>
+                <p>by Marie Curie</p>
+            </div>
+
+        </div>
+        <div class="book1">
+            <div>
+                <img src="./Images/Six Biographies Worth Reading This WomenÔÇÖs History Month.jpg" alt="">
+                <h1>"Madame Curie: A Biography"</h1>
+                <p>by Ève Curie</p>
+
+            </div>
+            <div>
+                <img src="./Images/39780373.jpg" alt="">
+                <h1>"Pierre Curie"</h1>
+                <p>by Marie Curie <br>(A tribute written after Pierre's death)</p>
+            </div>
+
+
+            <div>
+                <img src="./Images/Marie Curie tells how she discovered radium - a scientific breakthrough - Click Americana.jpg"
+                    alt="">
+
+                <h1>"The Discovery of Radium"</h1>
+                <p>by Marie Curie and Other</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- awards and honors section -->
+    <section>
+        <div class="awards">
+
+            <div>
+                <img src="./Images/Awards and honors.png" alt="">
+            </div>
+            <div>
+                <h1 class="awards1">Awards &
+                    Honors</h1>
+                <p class="awards2">Together with her husband, she was awarded half of the Nobel Prize for Physics in
+                    1903, for their
+                    study
+                    into the spontaneous radiation discovered by Becquerel, who was awarded the other half of the Prize.
+                    In
+                    1911 she received a second Nobel Prize, this time in Chemistry, in recognition of her work in
+                    radioactivity.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- filmography section -->
+    <section class="film" id="filmography">
+
+        <div class="film1">
+
+            <div>
+                <h1 style="margin-bottom: 15px;">Filmography</h1>
+                <p>Follows the famous physicist and chemist Marie Curie and her struggle for recognition in the
+                    male-dominated science community in early 20th century France.</p>
+
+            </div>
+
+            <!-- make the vide play for this section -->
+            <div class="film3">
+                <img src="./Images/Radioactive-1.webp" alt="filmography">
+
+                <iframe id="videoLink" width="560" height="315"
+                    src="https://www.youtube.com/embed/EaFzpcZ5I30?si=MWmv9_t3d7Dm1MlX" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;">
+                </iframe>
+
+                <div class="icon" id="button">
+                    <i class="fa-solid fa-play"></i>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- awards and achievement section  -->
+    <span
+        style="text-align: center; color: rgba(163, 0, 0, 1); padding: 20px; text-transform: uppercase; font-size: 12px;">
+        <h1 id="award">awards and achievement </h1>
+    </span>
+    <section class="awardss" id="aw">
+
+        <h2>Awards</h2>
+        <div class="awards-grid">
+
+            <div class="award">
+                <div class="text">
+                    <p>Nobel Prize in Physics</p>
+                    <span class="year">1903</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>Recipients: Marie Curie, Pierre Curie, and Henri Becquerel
+                    </p>
+                    <p> Achievement: Awarded for their joint research on radiation phenomena, which laid the
+                        foundation for the field of nuclear physics.(SlideServe)</p>
+                </div>
+            </div>
+
+            <div class="award">
+                <div class="text">
+                    <p>Nobel Prize in Chemistry</p>
+
+                    <span class="year">1911</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>Recipient: Marie Curie</p>
+                    <p> Achievement: Honored for her discovery of the elements radium and polonium, by the isolation of
+                        radium and the study of its properties.(WIRED)
+                    </p>
+                </div>
+            </div>
+
+            <div class="award">
+                <div class="text">
+                    <p>John Scott Legacy Medal and Premium</p>
+                    <span class="year">1921</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>* Recipient: Marie Curie
+                    </p>
+                    <p>* Achievement: Recognized for her significant contributions to the advancement of science,
+                        particularly in the field of radioactivity</p>
+                </div>
+            </div>
+
+            <div class="award">
+                <div class="text">
+                    <p>Davy Medal</p>
+                    <span class="year">1903</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>Recipients: Marie Curie and Pierre Curie</p>
+                    <p>Achievement: Awarded for their joint research on radium, which significantly advanced the
+                        understanding of radioactivity</p>
+                </div>
+            </div>
+            <div class="award">
+                <div class="text">
+                    <p>Matteucci Medal</p>
+                    <span class="year">1904</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>Recipients: Marie Curie and Pierre Curie</p>
+                    <p>Achievement: Recognized for their groundbreaking work in the study of radiation, particularly
+                        their discovery of radium</p>
+                </div>
+            </div>
+
+            <div class="award">
+                <div class="text">
+                    <p>Elliott Cresson Medal</p>
+                    <span class="year">1909</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p> Recipient: Marie Curie</p>
+                    <p>Achievement: Honored for her pioneering research in the field of radioactivity and her discovery
+                        of radium</p>
+                </div>
+
+            </div>
+
+            <div class="award">
+                <div class="text">
+                    <p>Willard Gibbs Award</p>
+                    <span class="year">1921</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p> Recipient: Marie Curie</p>
+                    <p>Achievement: Recognized for her outstanding contributions to the field of chemistry,
+                        particularly her work on radioactivity and the discovery of radium.</p>
+                </div>
+            </div>
+            <div class="award">
+                <div class="text">
+                    <p>Albert Medal</p>
+                    <span class="year">1910</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>* Recipient: Marie Curie</p>
+                    <p>Achievement: Awarded for her discovery of radium, which had profound implications in the
+                        field of science and medicine.</p>
+                </div>
+            </div>
+            <div class="award">
+                <div class="text">
+                    <p>Actonian Prize</p>
+                    <span class="year">1907</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p> Recipient: Marie Curie</p>
+                    <p> Achievement: Honored for her exceptional work in the field of science, particularly her
+                        research on radioactivity.</p>
+                </div>
+            </div>
+            <div class="award">
+                <div class="text">
+                    <p>Benjamin Franklin Medal</p>
+                    <span class="year">1921</span>
+                </div>
+                <span class="award-icon plus">+</span>
+                <span class="award-icon minus">−</span>
+                <div class="award_details">
+                    <p>Recipient: Marie Curie</p>
+                    <p> Achievement: Recognized for her significant contributions to science, particularly her
+                        groundbreaking research on radioactivity.</p>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- site map section  -->
+<footer class="footer">
+    <section class="map">
+        <h1>Marie Curie</h1>
+        <div class="sitemap">
+            <div><a style="color: white; text-decoration: none;" href="#home">home</a></div>
+            <hr class="site">
+            <div>
+                <p> <a style="color: white; text-decoration: none;" href="#biography">biography</a></p>
+            </div>
+            <hr>
+            <div>
+                <p> <a style="color: white; text-decoration: none;" href="#gallery">gallery</a></p>
+            </div>
+            <hr>
+            <div>
+                <p><a style="color: white; text-decoration: none;" href="#research">research</a></p>
+            </div>
+            <hr>
+            <div>
+                <p> <a style="color: white; text-decoration: none;" href="#book">books</a></p>
+            </div>
+            <hr>
+            <div>
+                <p><a style="color: white; text-decoration: none;" href="#filmography">Filmography</a></p>
+            </div>
+            <hr>
+            <div>
+                <p><a style="color: white; text-decoration: none;" href="#award">Award</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- continuous scrolling -->
+    
+        <section class="ticker-footer" aria-live="polite">
+            <div class="ticker">
+                <div class="ticker__track" id="tickerTrack">Loading…</div>
+            </div>
+        </section>
+
+    
+</footer>
+
+
+</body>
+
+</html>

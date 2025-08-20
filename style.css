@@ -1,0 +1,1261 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body{
+  font-family: 'kanit', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: var(--base-font-size);
+  padding-bottom: var(--ticker-height); 
+}
+:root {
+  --base-font-size: 16px;
+  --ticker-height: 28px;
+}
+
+:root {
+    --text: white;
+    --text2: rgba(239, 45, 45, 1);
+    --text3: rgba(161, 161, 161, 1);
+    --text4: rgba(85, 85, 85, 1);
+    --text5: rgba(0, 212, 255, 1);
+    --text6: #ccc;
+    --bg1: black;
+    --bg2: rgba(239, 45, 45, 1);
+    --bg3: rgba(228, 0, 0, 0.53);
+    --bg4: rgba(223, 223, 223, 0.29);
+    --bg5: #2F2F2F;
+    --bg6: rgba(163, 0, 0, 1);
+    --bg7: rgba(26, 26, 26, 0.29);
+    --bordercolor: #676767;
+}
+
+/*Header and Hero container*/
+.main-header{
+  position: relative;
+  font-family: 'Kanit' sans-serif;
+}
+
+.site-logo {
+  width: 50px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/*Logo container*/
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 0; 
+  border-radius: 0; 
+  box-shadow: none; 
+  background: none; 
+  display: flex;
+  align-items: center;
+}
+
+/*Styling for the image*/
+.logo{
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
+
+/*Two-tone diagonal background*/
+.hero {
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  background: linear-gradient(
+    135deg,
+    #ccc 50%,
+    #e22121 50%
+  );
+  color: white;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+.marie {
+    background-image: url(./Images/headerbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto; 
+    padding:  50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.text-content h1 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.text-content .quote {
+    
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-content .subtext {
+    
+    font-size: 16px;
+}
+
+.mmm {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .marie {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 48px;
+    }
+
+    .text-content .quote {
+        font-size: 18px;
+    }
+
+    .text-content .subtext {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .marie {
+        padding: 30px 20px;
+    }
+
+    .text-content h1 {
+        font-size: 36px;
+    }
+
+    .text-content .quote {
+        font-size: 16px;
+    }
+
+    .text-content .subtext {
+        font-size: 13px;
+    }
+}
+
+/* 
+    /* Hamburger button */
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      background: #050505;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Menu panel */
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100%;
+      background: #7a0c0c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.4s ease;
+      z-index: 1000;
+    }
+
+    .nav-menu.open {
+      right: 0;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin: 12px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    /* Fade-in when menu is open */
+    .nav-menu.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hover effect */
+    .nav-menu a:hover {
+      color: #00D4FF;
+    }
+
+    /* Click animation */
+    @keyframes clickFlash {
+      0% { color: black; }
+      100% { color: white; }
+    }
+
+    .nav-menu a.clicked {
+      animation: clickFlash 0.6s ease forwards;
+    }
+
+    /* Hamburger transforms into X */
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    } 
+
+/* Small counter (top right) */
+.visitor-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000000;
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 200px;
+  color: white;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+  height: 130px;
+}
+
+.visitor-counter:hover {
+  transform: scale(1.05);
+}
+
+.visitor-counter .vc-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.visitor-counter .vc-header i {
+  font-size: 15px;
+  margin-right: 9px;
+}
+
+.visitor-counter h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.visitor-counter .vc-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.vc-today { color: #00D4FF; }
+.vc-yesterday { color: #A30000; }
+
+/* Popup overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Popup card with image background */
+.popup {
+  background: url("Images/-12.jpg") no-repeat center center/cover;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  color: white;
+  position: relative;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.8);
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+
+/* Dark overlay inside popup to make text readable */
+.popup::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.popup * {
+  position: relative;
+  z-index: 1; /* text above overlay */
+}
+
+.popup .popup-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup .popup-header i {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.popup h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.popup .popup-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popup .today, .popup .total {
+  color: #00D4FF;
+}
+
+.popup .red {
+  color: #A30000;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
+
+/* biography section  */
+
+.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+.about h1 {
+    text-decoration: underline;
+}
+
+.about p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about img {
+    height: 500px;
+    width: 280px;
+}
+
+.aboutt-text {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 900px;
+    margin: auto;
+}
+
+
+
+/* gallery section  */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: visible;
+}
+
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.carousel1 {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    transition: transform ease 0.8s;
+
+
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+
+
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.carousel-button-prev,
+.carousel-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+.carousel-button-prev {
+    left: -40px;
+}
+
+.carousel-button-next {
+    right: -40px;
+}
+
+
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background: black;
+}
+
+/* details section  */
+
+
+.image-text {
+    background-image: url(./Images/mcp238_72dpi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+
+
+}
+
+.image-text p {
+
+    color: var(--text);
+    font-size: 40px;
+    max-width: 700px;
+
+}
+
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+
+.detail img {
+    height: 470px;
+    width: 300px;
+}
+
+.image-details {
+    width: 300px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+.image-details2 {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.detail-header {
+    margin-top: 25%;
+    text-transform: uppercase;
+}
+
+
+/* noble prize section */
+
+.prize {
+    padding: 1rem;
+    text-align: center;
+}
+
+.noble-prize {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.noble-prize img {
+    height: 500px;
+    width: 350px;
+}
+
+.noble-prize p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* perrrie currie section  */
+
+.perrie {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.perrie img {
+    height: 430px;
+    width: 300px;
+}
+
+.perrie-text2 {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.perrie-text {
+    max-width: 310px;
+    font-size: 12px;
+    color: var(--bg4);
+    font-weight: 200;
+}
+
+.perrie-text3 {
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 1000px;
+    margin: auto;
+}
+
+/* notebook  section */
+
+.notebook-header {
+    margin: auto;
+    padding: 1rem;
+    width: 500px;
+    line-height: 1.3;
+
+}
+
+.notebook-header h2 {
+    margin-bottom: 20px;
+}
+
+.notebook-header p {
+    font-size: 15px;
+    color: var(--bg4);
+}
+
+.notebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.notebook-text {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px;
+
+}
+
+.notebook img {
+    max-width: 270px;
+    height: auto;
+}
+
+/* research section */
+
+.research {
+    padding: 20px;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: auto;
+}
+
+.research h1 {
+    padding: 0.2rem;
+    color: var(--bg6);
+}
+
+.research2 {
+    max-width: 750px;
+    margin: auto;
+    color: var(--bg7);
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* books related to curie section  */
+
+.books {
+    background-color: var(--bg4);
+}
+
+.books h1 {
+    text-align: center;
+    /* padding: 3rem; */
+    text-transform: capitalize;
+
+}
+
+.book1 {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+
+
+}
+
+.book1 p {
+    text-align: center;
+    font-size: 11px;
+}
+
+.book1 h1 {
+    text-align: center;
+    font-size: 11px;
+
+}
+
+.book1 img {
+    height: auto;
+    max-width: 180px;
+    border: 4px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+
+}
+
+
+/* awards and honors section */
+.awards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+}
+
+.awards img {
+    max-width: 863px;
+    height: 500px;
+}
+
+.awards2 {
+    max-width: 300px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.awards1 {
+    margin-top: 20px;
+    width: 190px;
+    font-size: 40px;
+}
+
+/* filmography section */
+.film {
+    background-color: var(--bg2);
+    color: white;
+    padding: 50px;
+}
+
+.film1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.film1 p {
+    width: 230px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.film1 h1 {
+    margin-top: 5px;
+    font-size: 32px;
+}
+
+
+.film3 {
+    position: relative;
+    width: 560px;
+    height: 315px;
+}
+
+.film3 img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+
+.film3:hover .icon {
+    opacity: 1;
+}
+
+/* awards and achievment  */
+#aw {
+    background: var(--bg5);
+    color: var(--text);
+
+}
+
+.awardss {
+
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.awardss h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 10px 40px;
+    align-items: start;
+}
+
+
+.award {
+  /* let children flow normally and contain floats/absolutes */
+  display: flow-root;
+  padding: 12px 0;
+  position: relative;
+  overflow: visible;
+  min-height: auto;
+}
+
+/* Ensure award text and year are on two separate lines */
+.award .text {
+  display: flex !important;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.award .text p {
+  margin: 0;
+  width: 100%;
+}
+
+.award .text .year {
+  display: block !important;
+  width: 100%;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--text6);
+}
+
+
+.award-icon {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+}
+
+.award-icon.minus {
+    display: none;
+
+}
+
+
+.award_details {
+    display: none;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: var(--text6);
+}
+
+.award_details p {
+    font-size: 12px;
+}
+
+.award.active .details {
+    display: block;
+}
+
+.award.active .award-icon.plus {
+    display: none;
+}
+
+.award.active .award-icon.minus {
+    display: inline;
+}
+/* FIX: show details when an award is active */
+.award.active .award_details { 
+  display: block; 
+}
+
+
+
+.map h1 {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.map {
+    color: var(--text);
+    background-color: var(--bg2);
+    padding: 20px;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-transform: capitalize;
+
+}
+
+.sitemap hr {
+    border-color: var(--bg1);
+    height: 20px;
+    width: 2px;
+    border: 1px solid var(--bg1);
+
+
+
+}
+
+/* --- Scrolling Ticker (fixed bottom) --- */
+body { /* ensure content isn't hidden behind the fixed ticker */
+  padding-bottom: 14px; /* adjust if you change ticker height */
+}
+
+.ticker-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--ticker-height);
+  background: #000;
+  color: #fff;
+  z-index: 3000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font: 100 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+.ticker-footer, .ticker-footer * {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-height: var(--ticker-height) !important;
+  box-sizing: border-box !important;
+}
+
+.ticker {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.ticker__track {
+  display: inline-block;
+  padding-left: 100%; /* start off-screen to the right */
+  will-change: transform;
+  animation: tickerScroll 20s linear infinite;
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* we’ll duplicate content to loop seamlessly */
+}
+
+/* optional: nicer separators */
+.ticker-dot {
+  opacity: 0.6;
+  padding: 0 12px;
+}
+
+/* pause on hover (optional) */
+.ticker-footer:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+/* Make sure hamburger stays above visitor counter */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2001; /* Higher than counter */
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: #7a0c0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s ease;
+  z-index: 2000;
+}
+
+.nav-menu.open {
+  right: 0;
+}
+
+/* Visitor counter just below hamburger */
+.visitor-counter {
+  position: fixed;
+  top: 80px; /* below hamburger */
+  right: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  padding: 15px;
+  width: 220px;
+  color: #fff;
+  z-index: 1500; /* Below nav/hamburger */
+}
+html {
+  scroll-behavior: smooth;
+}
+/*  Responsive design mobile desktop and tablet */
+
+
+/* tablet  */
+@media (max-width: 768px) {
+
+    .book1 img {
+        width: 100%;
+    }
+
+    .carousel {
+        max-width: 95%;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next {
+        font-size: 0.8rem;
+    }
+
+
+    .carousel-button-prev {
+        left: -18px;
+    }
+
+    .carousel-button-next {
+        right: -18px;
+    }
+
+   
+
+    .image-text p {
+        font-size: 20px;
+        max-width: 400px;
+    }
+}
+
+
+/* desktop  */
+@media (max-width: 820px),
+(max-width: 834px) {
+
+    .book1 img {
+        width: 100%;
+    }
+
+    .awardss h2 {
+        font-size: 1.4rem;
+    }
+
+    .carousel {
+        max-width: 95%;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next {
+        font-size: 1rem;
+    }
+
+    .carousel-button-prev {
+        left: -18px;
+    }
+
+    .carousel-button-next {
+        right: -18px;
+    }
+
+    .image-text {
+        height: 500px;
+        width: 100%;
+    }
+    .image-text p{
+        font-size: 30px;
+        width: 500px;
+    }
+}
+
+/* Make hero section and its content visible and readable on small screens */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 180px;
+    padding: 0.7rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-image {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .hero-image img {
+    height: 180px;
+    max-width: 90vw;
+    border-radius: 8px;
+  }
+  .hero-text {
+    display: flex;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+    font-size: 1rem;
+    background: none;
+    color: #fff;
+    text-align: left;
+  }
+  .hero-text h1 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+  .quote {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
+/* mobile */
+@media (max-width: 480px),
+(max-width: 390px),
+(max-width: 600px),
+(max-width: 414px),
+(max-width: 375px) {
+
+    .book1 img {
+        width: 100%;
+    }
+
+    .map h1 {
+        font-size: 25px;
+    }
+
+    .awardss h2 {
+        font-size: 1.3rem;
+    }
+
+    .award .text p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-slide img {
+        border-radius: 8px;
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next {
+        font-size: 1.5rem;
+    }
+
+    .carousel-button-prev {
+        left: -20px;
+    }
+
+    .carousel-button-next {
+        right: -20px;
+    }
+
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .image-text {
+        height: 300px;
+        width: 100%;
+    }
+     .image-text p{
+        font-size: 18px;
+        width: 280px;
+    }
+}
+
+
+
+.awards-grid .award .text .year {
+  position: static !important; /* override absolute positioning */
+  transform: none !important; /* remove any transforms */
+  font-size: 14px;
+}
+
